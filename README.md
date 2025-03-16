@@ -86,6 +86,12 @@ Libraries: Install via pip install -r requirements.txt or manually:  <br/>
 
 ---
 
+## **Key Files**
+- report.pdf (One-page summary of steps and insights.): https://docs.google.com/document/d/1LbHbCj7qk9ohlcgGcPlvm_mRnHJf1sn6ntAEwmALP0E/edit?usp=sharing
+- video_presentation.mp4: https://drive.google.com/file/d/1WUPsZo2qEQBJtbxUvmldjcVH18XmEKKM/view?usp=sharing
+
+---
+
 ## **Citations**
 - Used pandas documentation for data handling [1].
 - Referenced scikit-learn for SMOTE and feature selection [2].
