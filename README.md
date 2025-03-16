@@ -15,95 +15,87 @@ This project assesses our ability to:
 
 ---
 
-## **Project Structure**
-This assignment is divided into three main parts:
-
-### **Part 1: Data Augmentation on CSV Files by Henriette Cyiza**
-**Objective:** Expand and enhance an existing dataset using data augmentation techniques.
-
-#### **Tasks:**
-1. **Load the Dataset:**
-   - Use the provided `customer_transactions.csv` dataset containing customer IDs, transaction histories, and purchase behaviors.
-
-2. **Data Cleaning & Handling Missing Values:**
-   - Identify and handle missing values using:
-     - Mean, Median, Mode Imputation.
-     - Predictive modeling to fill in missing data.
-
-3. **Data Augmentation Strategies:**
-   - **Synthetic Data Generation:**
-     - Apply random noise to numerical transaction values.
-     - Use SMOTE or interpolation to balance the dataset.
-   - **Feature Value Transformation:**
-     - Apply log transformation to skewed data.
-   - **Data Expansion:**
-     - Generate new synthetic transactions based on existing customer behaviors.
-
-4. **Export the Augmented Data:**
-   - Save the cleaned and augmented dataset as `customer_transactions_augmented.csv`.
+## **Team Members and Contributions**
+- Henriette Cyiza: Handled Part 1 - Data Augmentation (cleaning and expanding customer_transactions.csv).
+- Mahamat Ahmat: Managed Part 2 - Merging Datasets (linking transactions and social profiles).
+- Adedigba Adediwura: Took on Part 3 - Data Consistency and Quality Checks (ensuring the final dataset is ML-ready).
 
 ---
 
-### **Part 2: Merging Datasets with Transitive Properties by MAHAMAT AHAMAT**
-**Objective:** Merge datasets with shared but indirect relationships between entities.
+## **Repository Structure**
 
-#### **Datasets Used:**
-- `customer_transactions_augmented.csv` (from Part 1)
-- `customer_social_profiles.csv` (contains social media activity and purchase intent data)
-- `id_mapping.csv` (provides mapping between `customer_id_legacy` and `customer_id_new`)
-
-#### **Tasks:**
-1. **Identify the Link Between Datasets:**
-   - The `customer_transactions_augmented.csv` dataset contains:
-     - Customer ID, Purchase History, Amount Spent.
-   - The `customer_social_profiles.csv` dataset contains:
-     - Social Media Activity, Purchase Interest Score.
-   - The datasets use different ID systems and require `id_mapping.csv` for linking.
-
-2. **Perform a Complex Merge:**
-   - Use `id_mapping.csv` to map customer IDs between datasets.
-   - Merge datasets based on transitive relationships.
-   - Handle cases where one legacy ID maps to multiple new IDs.
-
-3. **Feature Engineering & Transformation:**
-   - Create a **Customer Engagement Score** based on transaction history and social media activity.
-   - Engineer predictive behavioral features using:
-     - Moving averages of transactions.
-     - Time-based aggregation of purchases.
-     - TF-IDF vectorization on customer reviews or social media comments.
-
-4. **Export the Final Preprocessed Data:**
-   - Save the final merged and feature-engineered dataset as `final_customer_data_[groupNumber].csv`.
+Formative2-Group[Number]/
+├── Notebook/
+│   ├── preprocessing_notebook.ipynb  # Main code for Parts 1, 2, and 3
+│   ├── customer_transactions.csv     # Initial transaction dataset
+│   ├── customer_social_profiles.csv  # Initial social media dataset
+│   ├── id_mapping.csv                # Key file to link customer IDs
+│   ├── customer_transactions_augmented.csv  # Output of Part 1
+│   ├── final_customer_data_[groupNumber].csv  # Output of Part 2 (uploaded)
+│   └── final_dataset_ready_[groupNumber].csv  # Output of Part 3
+├── Models/  # (Optional, if bonus completed)
+│   └── spending_prediction_model.pkl  # Trained ML model
+├── report.pdf  # One-page summary report
+├── video_presentation.mp4  # 5-minute group video
+└── README.md  # This file
 
 ---
 
-### **Part 3: Data Consistency and Quality Checks by Adedigba Adediwura**
-**Objective:** Ensure that the final dataset is clean, structured, and ready for machine learning models.
+## **How to Set Up and Run**
 
-#### **Tasks:**
-1. **Data Integrity Checks:**
-   - Check for duplicate entries and remove them.
-   - Ensure all categorical values are correctly mapped.
-   - Validate that all customer transactions have a corresponding social profile.
+### **Prerequisite**
+Python 3.8+
+Libraries: Install via pip install -r requirements.txt or manually:
+pandas
+numpy
+scikit-learn (for SMOTE and feature selection)
+matplotlib and seaborn (for visualizations)
+A Jupyter Notebook environment (e.g., JupyterLab, VS Code)
 
-2. **Statistical Summarization:**
-   - Generate descriptive statistics (`describe()`) for all numerical columns.
-   - Visualize the distribution of transaction amounts before and after augmentation.
-
-3. **Feature Selection for Machine Learning:**
-   - Identify highly correlated features using a correlation heatmap.
-   - Select the top 10 most important features using a feature selection algorithm.
-
-4. **Final Data Export:**
-   - Save the cleaned and optimized dataset as `final_dataset_ready_[groupNumber].csv`.
+### **Steps**
+1. Clone the repository
+2. Install Dependencies
+3. Run the Notebook
+4. View Outputs
 
 ---
 
+## **Project Details**
+
+### **Part 1: Data Augmentation**
+- Input: customer_transactions.csv (columns: transaction_id, amount_spent, purchase_date, etc.)
+- Tasks: Cleaned missing values, added random noise to amount_spent, and created synthetic rows.
+- Output: customer_transactions_augmented.csv
+
+### **Part 2: Merging Datasets**
+- Inputs: customer_transactions_augmented.csv, customer_social_profiles.csv (columns: social_media_platform, engagement_score), id_mapping.csv
+- Tasks: Merged using id_mapping.csv, added features like customer_engagement_score and transaction_moving_avg.
+- Output: final_customer_data_[groupNumber].csv (uploaded)
+
+### **Part 3: Data Consistency and Quality Checks**
+- Input: final_customer_data_[groupNumber].csv
+- Tasks: Checked repeats in transaction_id, verified product_category and social_media_platform, analyzed amount_spent and customer_rating, selected top features (e.g., amount_spent, engagement_score), and exported final_dataset_ready_[groupNumber].csv.
+- Output: final_dataset_ready_[groupNumber].csv
+
+### **Bonus Challenge**
+- Trained a model to predict amount_spent, saved in Models/.
+
+---
 
 ## **Expected Outcomes**
 - A structured and clean dataset ready for machine learning models.
 - Improved data consistency and feature engineering.
 - Insights into customer purchase behaviors through merged social media data.
+
+---
+
+## **Citations**
+- Used pandas documentation for data handling [1].
+- Referenced scikit-learn for SMOTE and feature selection [2].
+
+[1] Pandas Development Team, Pandas Documentation, 2023. [Online]. Available: https://pandas.pydata.org/docs/
+
+[2] Scikit-learn Developers, Scikit-learn User Guide, 2023. [Online]. Available: https://scikit-learn.org/stable/user_guide.html
 
 ---
 
