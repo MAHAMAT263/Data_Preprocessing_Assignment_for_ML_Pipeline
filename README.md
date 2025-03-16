@@ -1,8 +1,5 @@
 # Formative 2 - Data Preprocessing Assignment for Machine Learning Pipeline
 
-## **Group Members:**
--MAHAMAT AHAMAT -Adediwura Emmanuel -Henriette Cyiza -Sabir Walid Abdurahman
-
 ## **Assignment Overview**
 This assignment focuses on preprocessing and enhancing real-world datasets to ensure they are machine-learning-ready. The objective is to augment, merge, and clean data while maintaining consistency and integrity in a machine-learning pipeline.
 
@@ -26,31 +23,31 @@ This project assesses our ability to:
 
 Formative2-Group[Number]/
 ├── Notebook/
-│   ├── preprocessing_notebook.ipynb  # Main code for Parts 1, 2, and 3
-│   ├── customer_transactions.csv     # Initial transaction dataset
-│   ├── customer_social_profiles.csv  # Initial social media dataset
-│   ├── id_mapping.csv                # Key file to link customer IDs
-│   ├── customer_transactions_augmented.csv  # Output of Part 1
-│   ├── final_customer_data_[groupNumber].csv  # Output of Part 2 (uploaded)
-│   └── final_dataset_ready_[groupNumber].csv  # Output of Part 3
-├── Models/  # (Optional, if bonus completed)
-│   └── spending_prediction_model.pkl  # Trained ML model
-├── report.pdf  # One-page summary report
-├── video_presentation.mp4  # 5-minute group video
-└── README.md  # This file
+│   ├── preprocessing_notebook.ipynb  <br/>
+│   ├── customer_transactions.csv     <br/>
+│   ├── customer_social_profiles.csv  <br/>
+│   ├── id_mapping.csv                <br/>
+│   ├── customer_transactions_augmented.csv  <br/>
+│   ├── final_customer_data_[groupNumber].csv  <br/>
+│   └── final_dataset_ready_[groupNumber].csv  <br/>
+├── Models/  <br/>
+│   └── spending_prediction_model.pkl  <br/>
+├── report.pdf  <br/>
+├── video_presentation.mp4  <br/>
+└── README.md  <br/>
 
 ---
 
 ## **How to Set Up and Run**
 
 ### **Prerequisite**
-Python 3.8+
-Libraries: Install via pip install -r requirements.txt or manually:
-pandas
-numpy
-scikit-learn (for SMOTE and feature selection)
-matplotlib and seaborn (for visualizations)
-A Jupyter Notebook environment (e.g., JupyterLab, VS Code)
+Python 3.8+  <br/>
+Libraries: Install via pip install -r requirements.txt or manually:  <br/>
+- pandas  <br/>
+- numpy  <br/>
+- scikit-learn (for SMOTE and feature selection)  <br/>
+- matplotlib and seaborn (for visualizations)  <br/>
+- A Jupyter Notebook environment (e.g., JupyterLab, VS Code) <br/>
 
 ### **Steps**
 1. Clone the repository
