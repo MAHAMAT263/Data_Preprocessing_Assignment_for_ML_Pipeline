@@ -18,7 +18,7 @@ This project assesses our ability to:
 ## **Project Structure**
 This assignment is divided into three main parts:
 
-### **Part 1: Data Augmentation on CSV Files**
+### **Part 1: Data Augmentation on CSV Files by Henriette Cyiza**
 **Objective:** Expand and enhance an existing dataset using data augmentation techniques.
 
 #### **Tasks:**
@@ -44,7 +44,7 @@ This assignment is divided into three main parts:
 
 ---
 
-### **Part 2: Merging Datasets with Transitive Properties**
+### **Part 2: Merging Datasets with Transitive Properties by MAHAMAT AHAMAT**
 **Objective:** Merge datasets with shared but indirect relationships between entities.
 
 #### **Datasets Used:**
@@ -77,7 +77,7 @@ This assignment is divided into three main parts:
 
 ---
 
-### **Part 3: Data Consistency and Quality Checks**
+### **Part 3: Data Consistency and Quality Checks by Adedigba Adediwura**
 **Objective:** Ensure that the final dataset is clean, structured, and ready for machine learning models.
 
 #### **Tasks:**
